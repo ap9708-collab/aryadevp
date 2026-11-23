@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Aryadev Padhi</title>
+  <title>Aryadev Padhi — Mathematics &amp; Nonlinear Analysis</title>
 
-  <!-- Google Fonts: Instrument Serif, Inter, JetBrains Mono & Courier Prime (Typewriter) -->
+  <!-- Google Fonts: Source Serif 4, Inter, JetBrains Mono & Courier Prime -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300..600;1,8..60,300..600&display=swap"
+    rel="stylesheet"
+  />
 
   <!-- KaTeX for Mathematical Typesetting -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" />
@@ -24,7 +26,7 @@
         extend: {
           fontFamily: {
             sans: ['Inter', 'system-ui', 'sans-serif'],
-            serif: ['Instrument Serif', 'Georgia', 'serif'],
+            serif: ['"Source Serif 4"', 'Georgia', 'serif'],
             mono: ['JetBrains Mono', 'monospace'],
             typewriter: ['Courier Prime', 'Courier New', 'monospace']
           },
@@ -55,12 +57,16 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      font-family: 'Source Serif 4', Georgia, serif;
+      letter-spacing: 0.012em;
+      line-height: 1.7;
       background-color: #090A0F;
       color: #FAF8F5;
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;
     }
+
+
 
     body.light-theme {
       background-color: #FAF8F5;
@@ -94,7 +100,6 @@
       will-change: opacity, transform, filter;
       transition: opacity 0.16s linear, transform 0.2s ease-out;
     }
-
     /* Portrait Photographic Grades */
     .portrait-grade-mono {
       filter: grayscale(100%) contrast(1.25) brightness(1.02);
@@ -196,7 +201,7 @@
   }
 </style>
 </head>
-<body>
+<body class="font-roboto bg-alabaster text-ink ...">
 
   <!-- ===================================================================== -->
   <!-- FIXED MINIMALIST NAVIGATION HEADER                                    -->
@@ -454,24 +459,24 @@
     </div>
   </main>
 
-  <!-- ===================================================================== -->
-<!-- VIEW 2: ABOUT ME TAB                                                  -->
+ <!-- ===================================================================== -->
+<!-- VIEW 2: ABOUT ME TAB (Editorial Monograph Layout)                     -->
 <!-- ===================================================================== -->
-<section id="view-about" class="hidden min-h-screen bg-alabaster text-ink pt-28 pb-20 px-5 sm:px-10 relative">
-  <div class="max-w-5xl mx-auto space-y-12">
+<section id="view-about" class="hidden min-h-screen bg-alabaster text-ink pt-28 pb-24 px-5 sm:px-10 relative">
+  <div class="max-w-4xl mx-auto space-y-16">
 
-    <!-- Top Editorial Profile Grid (Portrait Left + Bio Right) -->
-    <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+    <!-- Top Editorial Profile (Floated Portrait + Colophon Left, Wrapped Justified Bio) -->
+    <div class="flow-root">
 
-      <!-- Left Column: Portrait & Coordinates Card -->
-      <div class="md:col-span-4 space-y-4">
-        <div class="rounded-2xl overflow-hidden bg-obsidian border border-hairline aspect-[4/5] relative flex items-center justify-center shadow-sm group">
+      <!-- Left Floated Column: Unboxed Portrait & Minimal Typographic Colophon -->
+      <figure class="w-full sm:max-w-xs md:max-w-none md:w-[30%] md:float-left md:mr-10 mb-6 md:mb-2">
+        <div class="overflow-hidden bg-obsidian border border-hairline aspect-[4/5] relative flex items-center justify-center">
           <img
-  src="https://lh3.googleusercontent.com/d/1ZQngworKRRwJGyqITOCl6s8ceKLhhjNZ"
-  alt="Aryadev Padhi"
-  class="w-full h-full object-cover portrait-grade-natural"
-  style="object-position: 30% 25%; transform: scale(1.15); transform-origin: 30% 25%;"
-/>
+            src="https://lh3.googleusercontent.com/d/1ZQngworKRRwJGyqITOCl6s8ceKLhhjNZ"
+            alt="Aryadev Padhi"
+            class="w-full h-full object-cover portrait-grade-natural"
+            style="object-position: 30% 25%; transform: scale(1.15); transform-origin: 30% 25%;"
+          />
           <svg id="about-default-svg" viewBox="0 0 400 500" class="hidden w-full h-full" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <radialGradient id="aboutAura" cx="52%" cy="40%" r="55%">
@@ -486,163 +491,162 @@
           </svg>
         </div>
 
-        <div class="p-4 rounded-2xl bg-white border border-hairline space-y-2 text-xs">
-          <div class="font-mono text-xs uppercase tracking-wider text-muted">Graduate Student</div>
-          <div id="about-department-display" class="font-medium text-ink">Courant Institute School of Mathematics, Computing, and Data Science, at New York University.</div>
-          <div class="pt-2 border-t border-hairline flex items-center justify-between">
+        <!-- Clean Hairline Colophon (No White Box) -->
+        <figcaption class="mt-3 pt-3 pb-3 border-y border-hairline space-y-2 text-xs">
+          <div class="font-mono text-[11px] uppercase tracking-widest text-muted">Graduate Student</div>
+          <div id="about-department-display" class="text-ink leading-snug">
+            Courant Institute School of Mathematics, Computing, and Data Science, New York University
+          </div>
+          <div class="pt-2 border-t border-hairline/70 flex items-center justify-between">
             <span id="about-email-display" class="font-mono text-muted">ap9708@nyu.edu</span>
-            <button type="button" onclick="copyAboutEmail()" class="text-accent hover:underline font-medium">
-              Copy
+            <button type="button" onclick="copyAboutEmail()" class="font-mono text-[11px] uppercase tracking-wider text-accent hover:underline">
+              [Copy]
             </button>
           </div>
-        </div>
-      </div>
+        </figcaption>
+      </figure>
 
-     <!-- Right Column: Narrative Bio -->
-<div class="md:col-span-8">
-  <div id="about-eyebrow-display" class="font-mono text-xs uppercase tracking-[0.22em] text-accent mb-2">
-    Biography &amp; Mathematical Trajectory
-  </div>
-  <h1 id="about-name-display" class="font-serif text-4xl sm:text-5xl text-ink tracking-tight leading-tight">
-    Aryadev Padhi
-  </h1>
-  <p class="mt-4 text-base text-muted leading-relaxed">
-    As a graduate student at the Courant Institute, I am involved in several research projects. No doubt, the most exciting one is my Master's thesis, advised by Prof. Esteban Tabak, on <em>Geometric Flows and Schwarzschild Geometry: A Study of Curvature, Singularities, and Evolution in General Relativity</em>. My work investigates the effect of curvature and singularity development on geometric flows in curved Riemannian manifolds, focusing specifically on Schwarzschild-type geometries and their connection to Ricci curvature and black hole geometry. The analytical and computational aspects involve techniques from differential geometry, functional analysis, nonlinear PDEs, and level-set methods, which reflect my primary research interests.
-  </p>
-  <p class="mt-4 text-base text-muted leading-relaxed">
-    I am also part of an NSF-funded research group with Kwesi Forson and Dr. Jennifer G&uuml;ler at the University of Virginia's G&uuml;ler Malaria Lab. Our aim is to develop a quantitative framework for understanding how <em>Plasmodium falciparum</em> parasites make cell-fate decisions between normal development and latency under nutrient stress and antimalarial drug exposure. My work involves developing mathematical models to investigate drug effectiveness, saturation points, and the conditions under which outbreaks could occur, connecting mathematical predictions with experimental observations.
-  </p>
-  <p class="mt-4 text-base text-muted leading-relaxed">
-    I have also worked on the ecological side of mathematical biology, particularly nonlinear dynamical systems, pattern formation, and computational differential equations. I have a published paper in the <em>Electronic Journal of Qualitative Theory of Differential Equations</em>, alongside preprints on traveling-wave solutions in Lotka&ndash;Volterra systems, group defense mechanisms, and Turing patterns in cross-diffusive systems. Complementing my analytical work, I co-developed a Physics-Informed Neural Network framework for solving differential equations with periodic coefficients. I am also working on global boundedness and codimension-2 Turing&ndash;Hopf bifurcation in a three-species Hastings&ndash;Powell system with cross-diffusion, where I am investigating the analytical challenges involving diffusion matrices, center manifold reduction, and weak solution regularity.
-  </p>
-  <p class="mt-4 text-base text-muted leading-relaxed">
-    Here are my favorite theorems and math things that I appreciate that they exist.
-  </p>
-</div>
-    </div><!-- End Top Editorial Profile Grid -->
-<!-- Full-Width Favorite Math Grid (2 Rows of 3 Squares) -->
-    <div
-      id="about-pillars-grid"
-      style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; width: 100%;"
-    >
-      <!-- Box 01 -->
-      <div
-        style="aspect-ratio: 1 / 1; display: flex; flex-direction: column; justify-content: space-between;"
-        class="p-6 rounded-2xl bg-white border border-hairline"
-      >
-        <div>
-          <div class="font-mono text-xs uppercase tracking-wider text-accent">01 &middot; Compactness</div>
-          <h2 class="font-serif text-2xl text-ink mt-2">Rellich&ndash;Kondrachov</h2>
+      <!-- Narrative Bio (Wraps seamlessly below the portrait colophon) -->
+      <div>
+        <div id="about-eyebrow-display" class="font-mono text-xs uppercase tracking-[0.2em] text-muted mb-2">
+          Biography &amp; Mathematical Trajectory
         </div>
-        <p class="text-sm text-muted leading-relaxed">
-          Boundedness alone sometimes wouldn't imply convergence; however, if provided enough regularity, one can extract convergence in a weaker norm.
+        <h1 id="about-name-display" class="font-serif text-4xl sm:text-5xl text-ink tracking-tight leading-tight">
+          Aryadev Padhi
+        </h1>
+        <p class="mt-5 text-base text-ink/85 leading-relaxed text-justify">
+          As a graduate student at the Courant Institute, I am involved in several research projects. No doubt, the most exciting one is my Master's thesis, advised by Prof. Esteban Tabak, on <em>Geometric Flows and Schwarzschild Geometry: A Study of Curvature, Singularities, and Evolution in General Relativity</em>. My work investigates the effect of curvature and singularity development on geometric flows in curved Riemannian manifolds, focusing specifically on Schwarzschild-type geometries and their connection to Ricci curvature and black hole geometry. The analytical and computational aspects involve techniques from differential geometry, functional analysis, nonlinear PDEs, and level-set methods, which reflect my primary research interests.
+        </p>
+        <p class="mt-4 text-base text-ink/85 leading-relaxed text-justify">
+          I am also part of an NSF-funded research group with Kwesi Forson and Dr. Jennifer G&uuml;ler at the University of Virginia's G&uuml;ler Malaria Lab. Our aim is to develop a quantitative framework for understanding how <em>Plasmodium falciparum</em> parasites make cell-fate decisions between normal development and latency under nutrient stress and antimalarial drug exposure. My work involves developing mathematical models to investigate drug effectiveness, saturation points, and the conditions under which outbreaks could occur, connecting mathematical predictions with experimental observations.
+        </p>
+        <p class="mt-4 text-base text-ink/85 leading-relaxed text-justify">
+          I have also worked on the ecological side of mathematical biology, particularly nonlinear dynamical systems, pattern formation, and computational differential equations. I have a published paper in the <em>Electronic Journal of Qualitative Theory of Differential Equations</em>, alongside preprints on traveling-wave solutions in Lotka&ndash;Volterra systems, group defense mechanisms, and Turing patterns in cross-diffusive systems. Complementing my analytical work, I co-developed a Physics-Informed Neural Network framework for solving differential equations with periodic coefficients. I am also working on global boundedness and codimension-2 Turing&ndash;Hopf bifurcation in a three-species Hastings&ndash;Powell system with cross-diffusion, where I am investigating the analytical challenges involving diffusion matrices, center manifold reduction, and weak solution regularity.
+        </p>
+        <p class="mt-4 text-base text-ink/85 leading-relaxed text-justify">
+          Here are my favorite theorems and math things that I appreciate that they exist.
         </p>
       </div>
 
-      <!-- Box 02 -->
-      <div
-        style="aspect-ratio: 1 / 1; display: flex; flex-direction: column; justify-content: space-between;"
-        class="p-6 rounded-2xl bg-white border border-hairline"
-      >
-        <div>
-          <div class="font-mono text-xs uppercase tracking-wider text-accent">02 &middot; Point-Set Topology</div>
-          <h2 class="font-serif text-2xl text-ink mt-2">Hausdorff Spaces</h2>
-        </div>
-        <p class="text-sm text-muted leading-relaxed">
-          You can separate any two distinct points by putting each in its own non-overlapping open neighborhood.
-        </p>
+    </div><!-- End Top Editorial Profile -->
+
+    <!-- Unboxed Two-Column Monograph Index (Replaces 6 Square Bento Cards) -->
+    <div>
+      <div class="pb-3 mb-8 border-b border-ink/20 flex items-baseline justify-between">
+        <h2 class="font-serif text-2xl text-ink">Selected Theorems &amp; Mathematical Objects</h2>
+        <span class="font-mono text-xs uppercase tracking-widest text-muted">&sect; 01 &ndash; 06</span>
       </div>
 
-      <!-- Box 03 -->
-      <div
-        style="aspect-ratio: 1 / 1; display: flex; flex-direction: column; justify-content: space-between;"
-        class="p-6 rounded-2xl bg-white border border-hairline"
-      >
-        <div>
-          <div class="font-mono text-xs uppercase tracking-wider text-accent">03 &middot; Inequality</div>
-          <h2 class="font-serif text-2xl text-ink mt-2">Young's Inequality</h2>
-        </div>
-        <p class="text-sm text-muted leading-relaxed">
-          For any two non-negative real numbers $a, b \ge 0$ and conjugate exponents $p, q > 1$ with $\frac{1}{p} + \frac{1}{q} = 1$: $$ab \le \frac{a^p}{p} + \frac{b^q}{q}$$
-        </p>
-      </div>
+      <div id="about-pillars-grid" class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+        <!-- Item 01 -->
+        <article class="pt-4 border-t border-hairline">
+          <div class="flex items-baseline justify-between gap-2">
+            <h3 class="font-serif text-xl text-ink">Rellich&ndash;Kondrachov</h3>
+            <span class="font-mono text-[11px] uppercase tracking-wider text-muted shrink-0">01 &middot; Compactness</span>
+          </div>
+          <p class="mt-2.5 text-sm text-muted leading-relaxed text-justify">
+            Boundedness alone sometimes wouldn't imply convergence; however, if provided enough regularity, one can extract convergence in a weaker norm.
+          </p>
+        </article>
 
-      <!-- Box 04 -->
-      <div
-        style="aspect-ratio: 1 / 1; display: flex; flex-direction: column; justify-content: space-between;"
-        class="p-6 rounded-2xl bg-white border border-hairline"
-      >
-        <div>
-          <div class="font-mono text-xs uppercase tracking-wider text-accent">04 &middot; Measure Theory</div>
-          <h2 class="font-serif text-2xl text-ink mt-2">Radon&ndash;Nikodym Theorem</h2>
-        </div>
-        <p class="text-sm text-muted leading-relaxed">
-          If you have two ways of measuring the <em>size</em> of regions in a space with an initial measure ($\mu$) and a new measure ($\nu$), and the new measure never assigns weight to anything the initial says has zero size, then you can calculate the new measure simply by applying a reweighting function to the initial measure.
-        </p>
-      </div>
+        <!-- Item 02 -->
+        <article class="pt-4 border-t border-hairline">
+          <div class="flex items-baseline justify-between gap-2">
+            <h3 class="font-serif text-xl text-ink">Hausdorff Spaces</h3>
+            <span class="font-mono text-[11px] uppercase tracking-wider text-muted shrink-0">02 &middot; Topology</span>
+          </div>
+          <p class="mt-2.5 text-sm text-muted leading-relaxed text-justify">
+            You can separate any two distinct points by putting each in its own non-overlapping open neighborhood.
+          </p>
+        </article>
 
-      <!-- Box 05 (Placeholder — replace when ready) -->
-      <div
-        style="aspect-ratio: 1 / 1; display: flex; flex-direction: column; justify-content: space-between;"
-        class="p-6 rounded-2xl bg-white/60 border border-dashed border-hairline"
-      >
-        <div>
-          <div class="font-mono text-xs uppercase tracking-wider text-muted">05 &middot; Spectral Theory</div>
-          <h2 class="font-serif text-2xl text-muted mt-2">Spectral Theorem</h2>
-        </div>
-        <p class="text-sm text-muted/80 leading-relaxed">
-          any symmetric or normal linear operator can be broken down into a set of mutually perpendicular directions along which the operator acts purely as simple stretching or scaling..
-        </p>
-      </div>
+        <!-- Item 03 -->
+        <article class="pt-4 border-t border-hairline">
+          <div class="flex items-baseline justify-between gap-2">
+            <h3 class="font-serif text-xl text-ink">Young's Inequality</h3>
+            <span class="font-mono text-[11px] uppercase tracking-wider text-muted shrink-0">03 &middot; Analysis</span>
+          </div>
+          <p class="mt-2.5 text-sm text-muted leading-relaxed text-justify">
+            For any two non-negative real numbers $a, b \ge 0$ and conjugate exponents $p, q > 1$ with $\frac{1}{p} + \frac{1}{q} = 1$: $$ab \le \frac{a^p}{p} + \frac{b^q}{q}$$
+          </p>
+        </article>
 
-      <!-- Box 06 (Placeholder — replace when ready) -->
-      <div
-        style="aspect-ratio: 1 / 1; display: flex; flex-direction: column; justify-content: space-between;"
-        class="p-6 rounded-2xl bg-white/60 border border-dashed border-hairline"
-      >
-        <div>
-          <div class="font-mono text-xs uppercase tracking-wider text-muted">06 &middot; Reserved</div>
-          <h2 class="font-serif text-2xl text-muted mt-2">Forthcoming</h2>
-        </div>
-        <p class="text-sm text-muted/80 leading-relaxed">
-          Space reserved for the next favorite theorem or analytical tool.
-        </p>
+        <!-- Item 04 -->
+        <article class="pt-4 border-t border-hairline">
+          <div class="flex items-baseline justify-between gap-2">
+            <h3 class="font-serif text-xl text-ink">Radon&ndash;Nikodym Theorem</h3>
+            <span class="font-mono text-[11px] uppercase tracking-wider text-muted shrink-0">04 &middot; Measure Theory</span>
+          </div>
+          <p class="mt-2.5 text-sm text-muted leading-relaxed text-justify">
+            If you have two ways of measuring the <em>size</em> of regions in a space with an initial measure ($\mu$) and a new measure ($\nu$), and the new measure never assigns weight to anything the initial says has zero size, then you can calculate the new measure simply by applying a reweighting function to the initial measure.
+          </p>
+        </article>
+
+        <!-- Item 05 -->
+        <article class="pt-4 border-t border-hairline">
+          <div class="flex items-baseline justify-between gap-2">
+            <h3 class="font-serif text-xl text-ink">Spectral Theorem</h3>
+            <span class="font-mono text-[11px] uppercase tracking-wider text-muted shrink-0">05 &middot; Spectral Theory</span>
+          </div>
+          <p class="mt-2.5 text-sm text-muted leading-relaxed text-justify">
+            Any symmetric or normal linear operator can be broken down into a set of mutually perpendicular directions along which the operator acts purely as simple stretching or scaling.
+          </p>
+        </article>
+
+        <!-- Item 06 -->
+        <article class="pt-4 border-t border-hairline">
+          <div class="flex items-baseline justify-between gap-2">
+            <h3 class="font-serif text-xl text-muted italic">Forthcoming</h3>
+            <span class="font-mono text-[11px] uppercase tracking-wider text-muted shrink-0">06 &middot; Reserved</span>
+          </div>
+          <p class="mt-2.5 text-sm text-muted/80 leading-relaxed text-justify">
+            Space reserved for the next favorite theorem or analytical tool.
+          </p>
+        </article>
       </div>
     </div>
-   <!-- Full-Width Academic Notes & Milestones -->
-    <div class="p-6 rounded-2xl bg-white border border-hairline space-y-4">
-      <div class="font-mono text-xs uppercase tracking-wider text-muted">Academic Notes &amp; Milestones</div>
-      <div id="about-milestones-list" class="space-y-3 text-sm">
-        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-3 border-b border-hairline">
-          <div>
+
+    <!-- Unboxed Academic Notes & Milestones -->
+    <div>
+      <div class="pb-3 mb-2 border-b border-ink/20">
+        <h2 class="font-serif text-2xl text-ink">Academic Notes &amp; Milestones</h2>
+      </div>
+
+      <div id="about-milestones-list" class="divide-y divide-hairline text-sm">
+        <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-3">
+          <div class="max-w-2xl">
             <span class="font-medium text-ink">Mathematical modeling of <em>Plasmodium falciparum</em> cell-fate decisions, drug efficacy, and malaria outbreak thresholds.</span>
             <span class="text-muted"> &mdash; Funded by National Science Foundation</span>
           </div>
           <span class="font-mono text-xs text-muted shrink-0">Present</span>
         </div>
-        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-3 border-b border-hairline">
-          <div>
+
+        <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-3">
+          <div class="max-w-2xl">
             <span class="font-medium text-ink">Global Boundedness and Codimension-2 Turing&ndash;Hopf Bifurcation in a Three-Species Hastings&ndash;Powell System with Cross-Diffusion</span>
             <span class="text-muted"> &mdash; Conference Talk, Finding Your Inner Modeler, University of California at Irvine</span>
           </div>
           <span class="font-mono text-xs text-muted shrink-0">August 2026</span>
         </div>
-        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-3 border-b border-hairline">
-          <div>
+
+        <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-3">
+          <div class="max-w-2xl">
             <span class="font-medium text-ink">Predator&ndash;Prey Model with Prey Harvesting and Intraspecific Predator Competition</span>
             <span class="text-muted"> &mdash; Conference Talk, American Mathematical Society New England Graduate Student Conference, Brown University</span>
           </div>
           <span class="font-mono text-xs text-muted shrink-0">April 2026</span>
         </div>
-        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2 pb-3 border-b border-hairline">
-          <div>
+
+        <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-3">
+          <div class="max-w-2xl">
             <span class="font-medium text-ink">L$\varepsilon$MM$\forall$</span>
             <span class="text-muted"> &mdash; Founder and Secretary</span>
           </div>
           <span class="font-mono text-xs text-muted shrink-0">2025 &ndash; 2026</span>
         </div>
-        <div class="flex flex-col sm:flex-row sm:items-baseline justify-between gap-2">
-          <div>
+
+        <div class="py-4 flex flex-col sm:flex-row sm:items-baseline justify-between gap-3">
+          <div class="max-w-2xl">
             <span class="font-medium text-ink">Member of The Unholy Trinity</span>
             <span class="text-muted"> &mdash; Member name: The farmer of Aura</span>
           </div>
@@ -650,10 +654,9 @@
         </div>
       </div>
     </div>
+
   </div>
 </section>
-
-
 <!-- ===================================================================== -->
   <!-- VIEW 3: NONLINEAR PDE SHOCK FORMATION GRAPHING CALCULATOR             -->
   <!-- ===================================================================== -->
@@ -3767,7 +3770,7 @@ function toggleTeachingRow(contentId, iconId) {
           badge.innerHTML = '<span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span>Smooth Classical Solution';
         }
         if (sub) {
-          sub.textContent = Number.isFinite(pde.tb) ? `Smooth until tb = ${pde.tb.toFixed(2)} s` : 'Globally smooth for all t ≥ 0';
+          sub.textContent = Number.isFinite(pde.tb) ? `Smooth until $t_b$ = ${pde.tb.toFixed(2)} s` : 'Globally smooth for all t ≥ 0';
         }
         if (xsEl) xsEl.textContent = '—';
         if (speedEl) speedEl.textContent = 'Speed s: —';
